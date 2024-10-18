@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     function traverseDOM(node, callback) {
         if (node) {
             const content = node.nodeType === Node.ELEMENT_NODE ? node.tagName : node.nodeValue;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    const rootNode = document.body; // початок обходу з тега body
+    const rootNode = document.body;
     traverseDOM(rootNode, function(node) {
         alert(`Вміст вузла: ${node.nodeName}`);
     });
